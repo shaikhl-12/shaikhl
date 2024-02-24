@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAPH Course Information</title>
+    <!-- Add Bootstrap CSS Link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        h1, h2 {
+            color: #007bff;
+        }
+
+        p {
+            color: #6c757d;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .list-group-item-info {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+
+        a {
+            color: #007bff;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: #0056b3;
+        }
+
+        .overview {
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .list-group-item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-text">
+
+            <h2 class="section-heading text-center">WAPH - Web Application Programming and Hacking</h2>
+            <p class="lead">Instructor: Dr. Phu Phung</p>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="mt-4">Student Information</h2>
+                    <ul>
+                        <li class="h5">Name: Hadeel Shaik</li>
+                        <li class="h5">Email: shaikhl@ucmail.uc.edu</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="mt-4">Repository Information</h2>
+                    <p class="header-text">Repository URL: <a href="https://github.com/shaikhl-12/waph-shaikhl/tree/main"> https://github.com/shaikhl-12/waph-shaikhl/tree/main</a></p>
+                    <p>This is a private repository for Hadeel to store all code from the course.</p>
+                </div>
+            </div>
+        </div>
+
+        <ul class="list-group mt-4">
+            <li class="list-group-item list-group-item-info">Labs</li>
+            <li class="list-group-item">
+                <a href="https://github.com/shaikhl-12/waph-shaikhl/tree/main/labs/lab0">Lab 0: Development Environment Setup</a>
+                <div class="overview">
+                    <h3>Overview</h3>
+                    <p></p>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <a href="https://github.com/shaikhl-12/waph-shaikhl/blob/main/labs/lab1/README.md">Lab 1: Foundations of the Web</a>
+                <div class="overview">
+                    <h3>Overview</h3>
+                    <p>The lab has two main sections - Web and HTTP Protocol, and web application programming. In the Web and HTTP Protocol section, we used the Wireshark tool to analyze the HTTP protocol. HTTP is a synchronous protocol that contains two main components - the HTTP request sent by the browser to the server, and the HTTP response sent back by the server. The browser makes a request and waits for the response before continuing..</p>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <a href="https://github.com/shaikhl-12/waph-shaikhl/blob/main/labs/lab2/ReadME.txt">Lab 2: Front-end Web Development</a>
+                <div class="overview">
+                    <h3>Overview</h3>
+                    <p>The lab has two main sections. The first section covers basic HTML with forms and JavaScript. Here I created a simple HTML webpage with forms and sent the form data to an Echo.php file. I also used JavaScript to send requests using GET and POST methods.
+
+                        The second section focuses on AJAX, CSS, jQuery and Web API integration. In this section, I used AJAX and jQuery to send form data asynchronously. I utilized CSS for styling and modifying the structure of the HTML content. Overall, the first section dealt with basic HTML form handling while the second section incorporated more advanced techniques like AJAX for asynchronous communication..</p>
+                </div>
+            </li>
+        </ul>
+
+        <ul class="list-group mt-4">
+            <li class="list-group-item list-group-item-info">Hackations</li>
+            <li class="list-group-item">
+                <a href="https://github.com/shaikhl-12/waph-shaikhl/blob/main/hackathons/hackathon1/ReadME.txt">Hackathon 1: Cross-site Scripting Attacks and Defenses</a>
+                <div class="overview">
+                    <h3>Overview</h3>
+                    <p>The main focus of this hackathon was on implementing XSS (cross-site scripting) attacks and defending against them. While hacking is illegal, it's important for developers to understand these types of attacks in order to properly defend against them.
+
+                        The hackathon was divided into two main tasks:
+                        
+                        Attacking a website through 6 different levels of XSS attacks. This involved actually carrying out the attacks to practice and see their effects.
+                        Defending the HTML and PHP code from previous labs against XSS attacks. This involved identifying vulnerabilities in the code and implementing protections like input validation and output encoding.
+                        Though hacking was involved, the overall goal was to gain hands-on experience with XSS in order to better secure systems against such attacks in an ethical manner.                    </p>   </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Add Bootstrap JS and Popper.js Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
