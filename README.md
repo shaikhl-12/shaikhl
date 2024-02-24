@@ -12,7 +12,7 @@
 
 **Short-bio**: I have keen interests in web development and secure software development. 
 
-![Hadeel's headshot](/hackathons/hackathon1/images/hadeel.jpg)
+![Hadeel's headshot](img/profile.jpg)
     
 ## Repository Information
 
