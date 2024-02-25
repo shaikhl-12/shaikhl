@@ -21,6 +21,18 @@
         <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
         <link href="css/style.css" rel="stylesheet">
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2SGWWQ01RC"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-2SGWWQ01RC');
+        </script>
+	  
+
     </head>
     <body data-spy="scroll" data-target=".navbar" data-offset="51">
         <div class="wrapper">
@@ -53,9 +65,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="waph.html" target="_blank">Waph<i class="fa fa-book"></i></a>
                                 </li>
-
-                              
-                                <li style="color: aliceblue;"><div id="weatherDisplay" style="width: 80px; padding-top: 43%;"> <!-- Adjust the width inline -->
+                                <br>
+                                <br>
+                                <li style="color: aliceblue; text-align: center;  margin: 0 auto;">Temp: <span id="weatherDisplay"></span></li>
                                     <!-- Weather icon will be inserted here dynamically -->
                             </ul>
                         </div>
@@ -94,7 +106,8 @@
                         </div>
                         <div class="row align-items-center">
                             <div class="col-md-6 col-lg-5">
-                                <img src="img/profile.jpg" alt="Image">
+                                &nbsp;&nbsp;&nbsp;<img src="img/profile.jpg" alt="Image" style="width: 235px; height: 210px;">
+
                             </div>
                             <div class="col-md-6 col-lg-7" >
                                 <p>
@@ -257,12 +270,25 @@
                                 <div class="contact-info">
                                     <p ><i class="fa fa-user"></i>Hadeel Shaik</p>
                                     <p><i class="fa fa-tag"></i>Web Designer & Developer</p>
-                                    <p><i class="fa fa-envelope"></i><a href="mailto:info@example.com">shaikhl@mail.uc.edu</a></p>
+                                    <p><i class="fa fa-envelope"></i><span id="email" onclick="showhideEmail()">Show my email</span></p>
+                                    <script>
+                                    var shown = false;
+                                    function showhideEmail(){
+                                        if (shown){
+                                        document.getElementById('email').innerHTML = "Show my email";
+                                        shown = false;
+                                        }else{
+                                        var myemail ="<a heref='mailto:shaikhl" + "@" + "mail.uc.edu'>shaikhl" + "@" + "mail.uc.edu</a>";
+                                        document.getElementById("email").innerHTML = myemail;
+                                        shown = true;
+                                        }
+                                    }
+                                    </script>
                                     <p><i class="fa fa-phone"></i><a href="tel:+1234567890">+ 513-276-2844</a></p>
                                     <p><i class="fa fa-map-marker"></i>Cincinnati, OH, USA</p>
                                     <div id="root"></div>   
                                     <canvas id="analog-clock" width="120" height="120"></canvas>
-                                    
+                                    <br><br>
                                     <script>
                                         ReactDOM.render(React.createElement(DigitalClock), document.getElementById('root'));
                                     </script>
@@ -301,9 +327,7 @@
                 <footer id="footer-copyright" class="footer-copyright">
                     <div class="container">
                         <div class="hm-footer-copyright text-center">
-                            <p>
                                 <div id="response1"></div>
-                            </p><!--/p-->
                         </div><!--/.text-center-->
                     </div><!--/.container-->
         
@@ -341,20 +365,6 @@
 		drawNumbers(ctx, radius);
 		drawTime(ctx, radius);
 	}
-  var shown = false;
-    function showhideEmail(){
-	if (shown) {
-		document.getElementById('email1').innerHTML="show my email";
-		shown = false;
-	}
-	else {
-		var myemail= "<a href='mailto:shaikhl"+"@"+"mail.uc.edu'>shaikhl"+ "@"+"mail.uc.edu</a>";
-		document.getElementById('email1').innerHTML=myemail;
-		shown = true;
-
-	}
-
-}
   </script>
   <script>
 		document.addEventListener("DOMContentLoaded", function () {
@@ -415,43 +425,6 @@
         // Call fetchWeather() function to display weather information on page load
         fetchWeather();
         
-        
-            // Function to set a cookie with a given name, value, and expiration date
-            function setCookie(name, value, days) {
-                var expires = "";
-                if (days) {
-                    var date = new Date();
-                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-                    expires = "; expires=" + date.toUTCString();
-                }
-                document.cookie = name + "=" + (value || "") + expires + "; path=/";
-            }
-    
-            // Function to get the value of a cookie by its name
-            function getCookie(name) {
-                var nameEQ = name + "=";
-                var ca = document.cookie.split(';');
-                for (var i = 0; i < ca.length; i++) {
-                    var c = ca[i];
-                    while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-                    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-                }
-                return null;
-            }
-    
-            // Function to display the welcome message based on cookie
-            function displayWelcomeMessage() {
-                var lastVisit = getCookie("lastVisit");
-                var welcomeMessage = document.getElementById("welcomeMessage");
-                if (lastVisit) {
-                    welcomeMessage.innerText = "Welcome back! Your last visit was " + lastVisit;
-                } else {
-                    var currentDate = new Date().toUTCString();
-                    setCookie("lastVisit", currentDate, 365); // Set cookie for 1 year
-                    welcomeMessage.innerText = "Welcome to my Profile!";
-                }
-            }
-        
     
             </script>
     
@@ -464,7 +437,45 @@
     
       gtag('config', 'G-6RVRKYNYMN');
     </script>
-    
+     <!-- Cookie Alert -->
+     <script>
+        // Function to set a cookie with a given name, value, and expiration date
+        function setCookie(name, value, days) {
+              var expires = "";
+              if (days) {
+                  var date = new Date();
+                  date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                  expires = "; expires=" + date.toUTCString();
+              }
+              document.cookie = name + "=" + (value || "") + expires + "; path=/";
+          }
+  
+          // Function to get the value of a cookie by its name
+          function getCookie(name) {
+              var nameEQ = name + "=";
+              var ca = document.cookie.split(';');
+              for (var i = 0; i < ca.length; i++) {
+                  var c = ca[i];
+                  while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                  if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+              }
+              return null;
+          }
+  
+          // Function to display the welcome message based on cookie
+          function displayWelcomeMessage() {
+              var lastVisit = getCookie("lastVisit");
+              if (lastVisit) {
+                  alert("Welcome back! Your last visit was " + lastVisit);
+              } else {
+                  var currentDate = new Date().toUTCString();
+                  setCookie("lastVisit", currentDate, 365); // Set cookie for 1 year
+                  alert("Welcome to my homepage!");
+              }
+          }
+          displayWelcomeMessage();
+  
+        </script>
     </body>
 
    </html>
