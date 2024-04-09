@@ -40,7 +40,7 @@ https://github.com/shaikhl-12/waph-shaikhl/edit/main/README.md
 
 **General requirements:**
 1.I made a professional site using open-source Bootstrap. Here's a screenshot of the index.html file hosted on GitHub.
-    ![Picture 1](./img/1.png)
+    ![Picture 1](../../img/1.png)
   	![Picture 2](./img/2.png)
   	![Picture 3](./img/3.png)
   	
